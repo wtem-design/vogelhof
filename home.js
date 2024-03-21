@@ -239,17 +239,6 @@ function SlideNumber(Splide, Components) {
   };
 }
 
-// Map slider
-
-let mapSplide = new Splide(".splide.is-popup", {
-  type: "loop",
-  perPage: 1,
-  pagination: false,
-  speed: 1500,
-  updateOnMove: true,
-  lazyLoad: "nearby",
-}).mount({ SlideNumber });
-
 //section animations
 
 gsap.from(".experience_heading-wrapper h2", {
