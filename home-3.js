@@ -70,60 +70,6 @@ new Splide("#flugel-slider", {
   },
 }).mount();
 
-//map slider
-function SlideNumber(Splide, Components) {
-  const { track } = Components.Elements;
-
-  let wrapperElm, currentElm, totalElm;
-
-  function mount() {
-    const arrowsWrapper = document.querySelector(".popup-arrows-wrapper");
-
-    if (!arrowsWrapper) {
-      console.error("Element with class 'popup-arrows-wrapper' not found.");
-      return;
-    }
-
-    wrapperElm = document.createElement("div");
-    wrapperElm.classList.add("map_popup-slide-numbers-wrapper");
-    wrapperElm.style.textAlign = "center";
-    arrowsWrapper.appendChild(wrapperElm);
-
-    currentElm = document.createElement("div");
-    currentElm.classList.add("map_popup-current-number");
-    currentElm.style.display = "inline-block";
-    wrapperElm.appendChild(currentElm);
-
-    totalElm = document.createElement("div");
-    totalElm.classList.add("map_popup-total-number");
-    totalElm.style.display = "inline-block";
-    wrapperElm.appendChild(totalElm);
-
-    update();
-    Splide.on("move", update);
-  }
-
-  function update() {
-    currentElm.textContent = Splide.index + 1;
-    totalElm.textContent = `/${Splide.length}`;
-  }
-
-  return {
-    mount,
-  };
-}
-
-// Map slider
-
-let mapSplide = new Splide(".splide.is-popup", {
-  type: "loop",
-  perPage: 1,
-  pagination: false,
-  speed: 1500,
-  updateOnMove: true,
-  lazyLoad: "nearby",
-}).mount({ SlideNumber });
-
 //section animations
 
 gsap.from(".experience_heading-wrapper h2", {
