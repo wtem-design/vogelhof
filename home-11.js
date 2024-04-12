@@ -13,7 +13,7 @@ let heroLoad = gsap.timeline({
 heroLoad
   .set(".section_home-hero, .header_navbar, .home_hero-donut", { autoAlpha: 1 })
   .from("#home_hero-donut", { rotate: 220, transformOrigin: "0 50%" }, 0)
-  .from(h1.words, { autoAlpha: 0, yPercent: 187.5, stagger: 0.03, rotate: -20 }, 0)
+  .from(h1.words, { yPercent: 187.5, stagger: 0.03, rotate: -20 }, 0)
   .from("#hero-button", { yPercent: 180, rotate: -10 }, 0)
   .from(".home-hero_image-wrapper img", { yPercent: 100, scale: 2 }, 0)
   .from(".header_navbar", { yPercent: -100 }, "<0.5");
