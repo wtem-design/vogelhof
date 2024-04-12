@@ -1,9 +1,9 @@
-const h1 = SplitType.create("h1", {
-  types: "lines, words",
+const h1 = SplitText.create("h1", {
+  type: "lines, words",
 });
 
-const overheadSplit = SplitType.create("#hero-overhead", {
-  types: "lines, words",
+const overheadSplit = SplitText.create("#hero-overhead", {
+  type: "lines, words",
 });
 
 let heroLoad = gsap.timeline({
@@ -153,8 +153,8 @@ aufenthaltSection
     0,
   );
 
-const bigNumber = SplitType.create(".home-uber-uns_big-number", {
-  types: "lines, words, chars",
+const bigNumber = SplitText.create(".home-uber-uns_big-number", {
+  type: "lines, words, chars",
 });
 
 let uberUnsSection = gsap.timeline({
